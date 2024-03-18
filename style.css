@@ -87,17 +87,17 @@ main {
         margin-right: 0; 
     }
     .section::after {
-        content: '';
-        position: absolute;
+        content: none;
+        position: none;
         background-color: transparent;
-        border: 2px solid #ffd1dc; /* Circle border color */
-        width: 5px; /* Circle width */
-        height: 5px; /* Circle height */
-        border-radius: 50%; /* Circle shape */
-        top: 50%; 
-        right: 15px; 
-        transform: translateY(-50%) scale(0); 
-        transition: transform 0.3s ease-in-out;
+        border: none; /* Circle border color */
+        width: none; /* Circle width */
+        height: none; /* Circle height */
+        border-radius: none; /* Circle shape */
+        top: none; 
+        right: none; 
+        transform: none; 
+        transition: none;
     }
 }
 
