@@ -1,0 +1,117 @@
+/* Add your CSS styles here */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff4f8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #ffd1dc;
+    padding: 2em; 
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+main {
+    padding: 2em; 
+}
+
+.section {
+    position: relative; 
+    background-color: #ffe8f1;
+    margin-bottom: 2em; 
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: filter 0.3s ease-in-out;
+    overflow: hidden; 
+    cursor: pointer; 
+    position: relative;
+}
+
+.picture-section img {
+    border-radius: 50%;
+    width: 256px; 
+    height: 256px; 
+    object-fit: cover; 
+}
+
+
+.section::after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid #ffd1dc; /* Circle border color */
+    width: 20px; /* Circle width */
+    height: 20px; /* Circle height */
+    border-radius: 50%; /* Circle shape */
+    top: 50%; 
+    right: 30px; 
+    transform: translateY(-50%) scale(0); 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.section.focused::after {
+    transform: translateY(-50%) scale(3); 
+}
+
+.special-list {
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.special-list li {
+    width: calc(33.33% - 10px); 
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+}
+
+
+.special-list li:nth-child(2n) {
+    margin-right: 0;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 1em; 
+    }
+    .special-list li {
+        width: 100%; 
+        margin-right: 0; 
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Blur effect */
+.blurred {
+    filter: blur(1px); 
+}
